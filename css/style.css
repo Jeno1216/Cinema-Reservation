@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+   font-family: "Poppins";
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+
+.container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   padding-bottom: 60px;
+}
+
+.container .content{
+   text-align: center;
+}
+
+.container .content h3{
+   font-size: 30px;
+   color:#333;
+}
+
+.container .content h3 span{
+   background: #970909;
+   color:#fff;
+   border-radius: 5px;
+   padding:0 15px;
+}
+
+.container .content h1{
+   font-size: 50px;
+   color:#333;
+}
+
+.container .content h1 span{
+   color:#970909;
+}
+
+.container .content p{
+   font-size: 25px;
+   margin-bottom: 20px;
+}
+
+.container .content .btn{
+   display: inline-block;
+   padding:10px 30px;
+   font-size: 20px;
+   background: #333;
+   color:#fff;
+   margin:0 5px;
+   border-radius: 5px;
+   text-transform: capitalize;
+}
+
+.container .content .btn:hover{
+   background: #970909;
+}
+
+.form-container{
+   min-height: 100vh;
+   padding:20px;
+   padding-bottom: 60px;
+   width: 50%;
+   background-color: rgb(0, 0, 0);
+}
+ /* Next & previous buttons */
+.prev, .next {
+   cursor: pointer;
+   user-select: none;
+   padding: 2px;
+   width: 80px;
+   border-radius:5px ;
+   font-size: 15px;
+ }
+ .fill-out{
+   display: none;
+width: 310px;
+ }
+ 
+.form-container form{
+   padding:20px;
+   border-radius: 5px;
+   box-shadow: 0 5px 10px rgba(0,0,0,.1);
+   width: 100%;
+
+}
+
+.form-container form h3{
+   font-size: 65px;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   color: white;
+
+}
+
+.form-container form input,
+.form-container form select{
+   width: 305px;
+   padding:8px 15px;
+   font-size: 15px;
+   margin:8px 0;
+   background: #eee;
+   border-radius: 5px;
+}
+ 
+.form-container form select option{
+   background: #fff;
+}
+
+.form-container form .form-btn{
+   background: #fbd0d9;
+   color:#970909;
+   text-transform: capitalize;
+   font-size: 15px;
+   cursor: pointer;
+}
+
+.form-container form .form-btn:hover{
+   background: #970909;
+   color:#fff;
+}
+
+.form-container form p{
+   margin-top: 10px;
+   font-size: 15px;
+   color: white;
+}
+
+.form-container form p a{
+   color:#970909;
+}
+
+.form-container form .error-msg{
+   margin:10px 0;
+   display: block;
+   color: white;
+   border-radius: 5px;
+   font-size: 20px;
+   padding:10px;
+}
+
+h3 {
+   position: relative;
+   animation-name: example;
+   animation-duration: 2s;
+ }
+
+ 
+ @keyframes example {
+   0%   { left:0px; top:-100px; color: white;}
+   100% {left:0px; top:0px;}
+ }
+
+ #prev{
+text-align: left;
+width: 300px;
+ }
+#next{
+   text-align: right;
+   width: 300px;
+
+}
+
+.main-container{
+   display: flex;
+        flex-direction: row; /*horizontal*/
+        justify-content:left;
+        flex-flow: wrap;
+        flex-direction: row; /*horizontal*/
+        margin: 0 auto;
+        background-color: black;
+
+}
+
+.image-container{
+   background-size: cover;
+   width: 50%;
+   display:flex;
+   justify-content: center;
+   flex-direction: row; /*horizontal*/
+   align-items: center;
+   background-repeat: no-repeat;
+
+}
+.image-container img{
+   width: 400px; height: 400px;
+
+}
+
+@media screen and (max-width: 1137px){
+   .main-container{
+      flex-direction: column-reverse;
+      align-items: center;
+   }
+   .form-container form h3{
+           width: 100%;
+
+   }
+   .form-container {
+      width: 60%; 
+
+   }
+   .form-container form {
+      width: 100%;
+      
+
+   }
+   .image-container{
+      width: 100%; 
+      
+   }
+}
+@media screen and (max-width: 974px){
+
+   .form-container {
+      width: 600px;
+   }
+
+}
+@media screen and (max-width: 664px){
+
+   .main-container{
+      text-align: center;
+   }
+   .form-container {
+      width: 100%;
+
+   }
+ 
+   .form-container form h3{
+      font-size: 55px;
+   }
+   .fill-out{
+      width: 310px;
+      margin-left: auto;
+      margin-right: auto;
+
+   }
+}

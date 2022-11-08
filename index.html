@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTG-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" type="image/png" href="sd.png" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <title> Systematix | Home </title>
+    
+</head>
+
+<body>
+    <nav>
+    
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo">
+            <img style=" height: 50px;" src="lgoo.png" alt="logo" id="logo">
+
+        </div>
+
+        <ul class="links">
+            <li><a href= "index.html" id="nav_active">MOVIES</a></li>
+            <li><a href="cinema.html">CINEMAS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="guide.html">HELP</a></li>
+            <li><a href="profile.php">MY PROFILE</a></li>
+
+        </ul>
+
+       
+        <label for="nav-toggle" class="icon-burger"> <!--this will stand as click on nav-toggle, these are the three lines-->
+         <p>HOME</p> 
+
+        </label>
+
+           <!-- Change Theme: this is connected to root in css and index.js -->
+           <div class="toggle-container">
+            <button class="theme-btn light" onclick="setTheme('light'); PictureChangeLight();" title="Light mode">
+                <img src="brightness.png" alt="">
+            </button>
+            <button class="theme-btn dark" onclick="setTheme('dark'); PictureChangeDark();" title="Dark mode">
+                <img src="night-mode.png" alt="">
+            </button>
+          </div>
+
+
+          <div class="profile-and-logout-container">
+
+            <a href="logout.php"> <div class="logout-container">
+                <img src="logout.png" alt="logout icon">
+                 <p> Log Out</p> 
+              </div>
+            </a> 
+    
+        </div>
+
+    </nav>
+
+
+    <br><br><br><br><br>
+
+    <div class="main-container">
+
+        <div class="left-container">
+
+            <div class="book-ticket">
+
+                <p id="book-ticket-title">BOOK A TICKET</p>
+
+                <div class="individual-book-ticket">
+              <a href="index.html"><img id="movie" src="movie.png">
+                <p id="movie-desc">Select Movie</p>
+            </a> 
+                </div>
+
+                <div class="individual-book-ticket">
+                  <a href="cinema.html"> <img id="location" src="location.png">
+                    <p id="movie-desc">Select Location</p> </a> 
+                    </div>
+
+                <div class="individual-book-ticket">
+                    <a href="cinema.html">  <img id="cinema" src="cinema.png">
+                    <p id="movie-desc">Select Cinema</p> </a>
+                    </div>
+
+                <div class="individual-book-ticket">
+                 <a href="ticketing.php"> <img id="schedule" src="schedule.png">
+                    <p id="movie-desc">Select Schedule</p></a>  
+                    </div>
+            </div>
+
+        <div class="genres">
+                
+            <p id="genres-title"> GENRES </p>
+
+            <div class="genres-individual">
+               <a href="action.html"><p>ACTION</p> </a> 
+            </div>
+
+            <div class="genres-individual">
+               <a href="drama.html"><p>DRAMA</p> </a> 
+            </div>
+            
+            <div class="genres-individual">
+              <a href="horror.html">  <p>HORROR</p> </a>
+            </div>
+
+            <div class="genres-individual">
+              <a href="comedy.html"> <p>COMEDY</p> </a> 
+            </div>
+      
+            <div class="genres-individual">
+               <a href="anime.html"> <p>ANIME</p> </a>
+            </div>
+      
+            <div class="genres-individual">
+             <a href="thriller.html"><p>THRILLER</p> </a>   
+            </div>
+
+            <div class="genres-individual">
+               <a href="fantasy.html"><p> FANTASY</p> </a> 
+            </div>
+
+            <div class="genres-individual">
+              <a href="romance.html">  <p>ROMANCE</p> </a>
+            </div>
+
+            <div class="genres-individual">
+               <a href="western.html"><p>WESTERN</p> </a> 
+            </div>
+
+        </div>
+
+        <div class="promos">
+
+            <p id="promos-title">PROMOS</p>
+
+            <div class="promos-individual">
+                <p>No promos available at the moment. Come back later.
+                </p>
+          </div>
+
+        </div>
+
+    </div>
+
+    <div class="right-container">
+
+        <div class="featured-title-container">
+            <p> FEATURED </p>
+
+        </div>
+
+        <div id="featured" class="featured">
+            <video class="featured-video" autoplay muted loop>
+                <source src="avatar.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+            </video>            
+            <p style="color:white;" class="featured-title"> AVATAR 2 </p>
+          <a href="ticketing.php">  <p class="featured-book-now">BOOK NOW</p> </a>
+        </div>
+
+        <div class="showing">
+            
+            <p id="showing-title"> NOW SHOWING </p>
+           <p  onclick="plusSlides(-1)" id="view-showing" class="prev"> View Next </p>
+           <img  onclick="plusSlides(1)" id="arrow1" src="arrow.png" class="next" alt="arrow"> 
+
+        </div>
+
+        <div class="showing-list fade" style="display: block;">
+            
+            <div id="showing-individual1" class="showing-individual">
+            <video id="showing-video1" class="showing-video1" autoplay muted loop>
+                <source src="avatar.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+            </video>            
+           <a href="ticketing.php"> <p id="showing-book-now">BOOK NOW</p> </a>
+          <a href="#"><img onclick="goFullscreen('showing-video1'); return false" id="showing-play1" 
+            src="play.png" alt="play"> </a>  
+            <p id="showing-movie-title"> Avatar 2 </p>
+            <p id="showing-movie-date"> Until June 28, 2022 </p>
+         <a href="avatar2.html"><img id="showing-info1" src="info.jpg" alt=""> </a> 
+            </div>
+
+            <div id="showing-individual2" class="showing-individual">
+                <video id="showing-video2" class="showing-video2" autoplay muted loop>
+                    <source src="sonic.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                </video>            
+              <a href="ticketing.php"><p id="showing-book-now">BOOK NOW</p> </a>
+                <a href="#"><img onclick="goFullscreen('showing-video2'); return false" id="showing-play2"
+                     src="play.png" alt="play"> </a>
+                <p id="showing-movie-title"> Sonic Hedgehog 2  </p>
+                <p id="showing-movie-date">Until July 1, 2022</p>
+             <a href="sonic.html"><img id="showing-info2" src="info.jpg" alt=""> </a> 
+                </div>
+        
+        </div>
+
+        
+        <div class="showing-list fade  ">
+            
+            <div id="showing-individual3" class="showing-individual">
+            <video id="showing-video3" class="showing-video1" autoplay muted loop>
+                <source src="jurassic.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+            </video>            
+           <a href="ticketing.php"> <p id="showing-book-now">BOOK NOW</p> </a>
+           <a href="#"><img onclick="goFullscreen('showing-video3'); return false" id="showing-play3"
+             src="play.png" alt="play"></a> 
+            <p id="showing-movie-title"> Jurassic World 3 </p>
+            <p id="showing-movie-date">Until July 10, 2022 </p>
+         <a href="jurassic.html"><img id="showing-info3" src="info.jpg" alt=""> </a> 
+            </div>
+
+            <div id="showing-individual4" class="showing-individual">
+                <video id="showing-video4" class="showing-video2" autoplay muted loop>
+                    <source src="adam.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                </video>            
+              <a href="ticketing.php"> <p id="showing-book-now">BOOK NOW</p> </a>
+                <a href="#"><img onclick="goFullscreen('showing-video4'); return false" id="showing-play4" 
+                    src="play.png" alt="play"> </a>
+                <p id="showing-movie-title"> Black Adam </p>
+                <p id="showing-movie-date"> Until June 30, 2022 </p>
+             <a href="adam.html"><img id="showing-info4" src="info.jpg" alt=""> </a> 
+                </div>
+        
+        </div>
+
+
+        <div class="coming-soon">
+
+            <p  id="coming-soon-title" > COMING SOON </p>
+            <p onclick="plusSlides1(-1)"  id="view-coming-soon" class="prev1"> View Next </p>
+            <img onclick="plusSlides1(1)" id="arrow2" src="arrow.png" alt="arrow" class="next1">
+
+        </div>
+
+        <div class="coming-soon-list fade" style="display: block;">
+            
+            <div id="coming-soon-individual1" class="coming-soon-individual">
+            <video class="coming-soon-video" autoplay muted loop>
+                <source src="lostcity.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+            </video>            
+            <p id="coming-soon-movie-title">The Lost City (2022) </p>
+         <a href="lost_city.html"><img id="coming-soon-info1" src="info.jpg" alt=""> </a> 
+            </div>
+
+            <div id="coming-soon-individual2" class="coming-soon-individual">
+                <video class="coming-soon-video" autoplay muted loop>
+                    <source src="thor.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                </video>            
+                <p id="coming-soon-movie-title"> Thor: Love and Thunder (2022)</p>
+             <a href="thor.html"><img id="coming-soon-info2" src="info.jpg" alt=""> </a> 
+                </div>
+
+                <div id="coming-soon-individual3" class="coming-soon-individual">
+                    <video class="coming-soon-video" autoplay muted loop>
+                        <source src="doctorstrange.mp4" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                    </video>            
+                    <p id="coming-soon-movie-title"> Doctor Strange 2 (2022) </p>
+                 <a href="doctorstrange.html"><img id="coming-soon-info3" src="info.jpg" alt=""> </a> 
+                    </div>   
+    </div>
+
+    <div class="coming-soon-list fade">
+            
+        <div id="coming-soon-individual4" class="coming-soon-individual">
+        <video class="coming-soon-video" autoplay muted loop>
+            <source src="blackpanther.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>            
+        <p id="coming-soon-movie-title"> Black Panther 2 (2022) </p>
+     <a href="blackpanther.html"><img id="coming-soon-info4" src="info.jpg" alt=""> </a> 
+        </div>
+
+        <div id="coming-soon-individual5" class="coming-soon-individual">
+            <video class="coming-soon-video" autoplay muted loop>
+                <source src="lightyear.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+            </video>            
+            <p id="coming-soon-movie-title"> Lightyear (2022)</p>
+         <a href="lightyear.html"><img id="coming-soon-info5" src="info.jpg" alt=""> </a> 
+            </div>
+
+            <div id="coming-soon-individual6" class="coming-soon-individual">
+                <video class="coming-soon-video" autoplay muted loop>
+                    <source src="marvels.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                </video>            
+                <p id="coming-soon-movie-title"> The Marvels (2022) </p>
+             <a href="marvel.html"><img id="coming-soon-info6" src="info.jpg" alt=""> </a> 
+                </div>   
+</div>
+
+<script>
+    
+var slideIndex1 = 1;
+showSlides1(slideIndex1);
+ 
+function plusSlides1(m) {
+    showSlides1(slideIndex1 += m);
+}
+ 
+function currentSlide1(m) {
+    showSlides1(slideIndex1 = m);
+}
+ 
+function showSlides1(m) {
+    var a;
+    var slides1 = document.getElementsByClassName("coming-soon-list");
+    var dots1 = document.getElementsByClassName("dot");
+    if (m > slides1.length) { slideIndex1 = 1 }
+    if (m < 1) { slideIndex1 = slides1.length }
+    for (a = 0; a < slides1.length; a++) {
+        slides1[a].style.display = "none";
+    }
+    slides1[slideIndex1 - 1].style.display = "block";
+}
+ 
+</script>
+
+</div>
+
+
+
+                     
+</div>
+
+<div class="footer-main-container" style="width: 100%; height: 250px; background-color: #970909; margin-top: 0px;">
+    <div class="footer-icons-container" style="width: 100%;background:none;
+    display: flex; align-items: center; justify-content: center; padding-top: 30px; ">
+
+       <a href="https://www.instagram.com/systematix.co/" target="_blank" style="width: 50px; background:none;"> 
+        <img style="width: 100%; background:none;" src="instagram.png"> </a>
+        
+        <a href="https://www.facebook.com/Systematixco-104839155600977" target="_blank" style="width: 50px; background:none;"> 
+        <img style="width: 100%; background:none;" src="facebook.png"> </a>
+
+        <a href="mailto:systematix.co@gmail.com" target="_blank" style="width: 50px; background:none;"> 
+        <img style="width: 100%; background:none;" src="message.png"> </a>
+
+        <a href="tel:+639197750645" target="_blank" style="width: 50px; background:none;"> 
+        <img style="width: 100%; background:none;" src="phone.png"> </a>
+
+    </div>
+
+    <div class="footer-icons-container" style="width: 100%; border-bottom: 1px solid rgb(231, 231, 231);background:none;
+    display: flex; align-items: center; justify-content: center; padding-top: 10px; text-align: center;">
+
+       <a href="index.html" style="background:none;"><p style="width: 100%; background:none; color: white; 
+       padding: 10px;"> MOVIES </p> </a> 
+
+       <a href="cinema.html" style="background:none; "><p style="width:  100%; background:none; color: white; 
+       padding: 10px;"> CINEMAS </p> </a> 
+
+        <a href="about.html" style="background:none;"><p style="width:  100%; background:none; color: white; 
+        padding: 10px;"> ABOUT </p> </a> 
+
+        <a href="guide.html" style="background:none; "><p style="width:  100%; background:none; color: white; 
+        padding: 10px;"> HELP </p> </a> 
+           
+        <a href="profile.php" style="background:none; "><p style="width:  100%; background:none; color: white; 
+        padding: 10px;"> MY PROFILE </p> </a> 
+        
+
+    </div>
+
+    <div class="footer-icons-container" style="width: 100%; background:none;
+    display: flex; align-items: center; justify-content: center; padding-top: 10px; text-align: center;">
+        <p style="width: auto; background:none; color: white; padding: 10px;" > 
+            <a style=" background:none; color: white;" href="terms.html">Terms & Conditions</a> |
+        <a style=" background:none; color: white;" href="privacy.html">Data Privacy Policy</a> </p>
+        <p style="width: auto; background:none; color: white; padding: 10px;"> 
+            &#169; 2022 Systematix.Co | All Rights Reserved. </p>
+
+
+    </div>
+</div>
+</body></html>
+
+
+
+         

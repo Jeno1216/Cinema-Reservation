@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTG-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="guide.css">
+    <script src="guide.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" type="image/png" href="sd.png" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <title> Systematix | Guide </title>
+    
+</head>
+
+<body>
+    <nav>
+    
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo">
+            <img style=" height: 50px;" src="lgoo.png" alt="logo" id="logo">
+
+        </div>
+
+        <ul class="links">
+            <li><a href= "index.html" >MOVIES</a></li>
+            <li><a href="cinema.html">CINEMAS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="guide.html" id=nav_active>HELP</a></li>
+            <li><a href="profile.php">MY PROFILE</a></li>
+
+        </ul>
+
+       
+        <label for="nav-toggle" class="icon-burger"> <!--this will stand as click on nav-toggle, these are the three lines-->
+         <p>HELP</p> 
+
+        </label>
+
+           <!-- Change Theme: this is connected to root in css and index.js -->
+           <div class="toggle-container">
+            <button class="theme-btn light" onclick="setTheme('light'); PictureChangeLight();" title="Light mode">
+                <img src="brightness.png" alt="">
+            </button>
+            <button class="theme-btn dark" onclick="setTheme('dark'); PictureChangeDark();" title="Dark mode">
+                <img src="night-mode.png" alt="">
+            </button>
+          </div>
+
+
+          <div class="profile-and-logout-container">
+
+            <a href="logout.php"> <div class="logout-container">
+                <img src="logout.png" alt="logout icon">
+                 <p> Log Out</p> 
+              </div>
+            </a> 
+    
+        </div>
+
+    </nav>
+
+
+    <br><br><br><br><br>
+
+<div class="main-container">
+
+    <div class="about">
+        <p> HELP </p>
+        <hr id="line-header">
+    </div>
+
+    <div class="help-list-container">
+        <button class="dot " onclick="currentSlide(1);">GETTING STARTED</button>
+        <button class="dot " onclick="currentSlide(2);">CREATING AN ACCOUNT</button>
+        <button class="dot " onclick="currentSlide(3);">LOGGING IN TO YOU ACCOUNT</button>
+        <button class="dot " onclick="currentSlide(4);">VIEWING YOUR PROFILE</button>
+        <button class="dot " onclick="currentSlide(5);">CHANGING ACCOUNT INFORMATION</button>
+        <button class="dot " onclick="currentSlide(6);">SIGNING OUT</button>
+        <button class="dot " onclick="currentSlide(7);">BOOKING A TICKET</button>
+        <button class="dot " onclick="currentSlide(8);">CONTACTING US</button>
+        <button class="dot " onclick="currentSlide(9);">VIEW CINEMAS MOVIE LIST</button>
+        <button class="dot " onclick="currentSlide(10);" style="border-bottom:0 ;">LIGHT/DARK THEME</button>
+
+
+    </div>
+
+
+    <div class="description-container" style="display:block;">
+        <p class="description-title">GETTING STARTED <img src="start.png" alt=""></p>
+        <p class="description-texts">
+          
+            HELLO THERE! Welcome to Systematix.co! <br> 
+            Systematix.co is a <b> PAY ON SITE </b> ticket/seat reservation. <br> We aim to provide our customers the best 
+            online cinema/ticketing reservation without having to pay online! <br> <br>
+            To know more about booking, click the button above with the name "BOOKING A TICKET". <br>
+             You can simply click any link above that aligns on your information need.
+
+        </p>
+
+    </div>
+
+    <div class="description-container">
+        <p class="description-title">CREATING AN ACCOUNT <img src="create.png" alt=""></p>
+        <p class="description-texts">
+            1. Click Register Now.
+           <div style="width:100%;"><img src="login_pic.png" alt="" style="width: 300px; "></div> <br>
+            2. Fill-out required information (Name, Phone Number, Address, Birthdate).  <br>  <br>
+            <div style="width:100%;"><img src="register_pic.png" alt="" style="width: 300px; "></div> <br>
+            3. Click Next button. <br>
+            4. Fill-out required information (Email). <br>
+            5. Enter desired password. <br>
+            6. Re-enter password to confirm. <br>
+            6.1 You can click back to edit information  (Name, Phone Number, Address, Birthdate) . <br>
+            7. Click Register Now button. <br>  <br>
+            <div style="width:100%;"><img src="login_pic.png" alt="" style="width: 300px; "></div> 
+            8. Account Registered.
+        </p>
+
+    </div>
+
+    <div class="description-container">
+        <p class="description-title"> LOGGING IN TO YOUR ACCOUNT <img src="create.png" alt=""></p>
+        <p class="description-texts">
+            1. Enter needed information. (Email, Password)
+           <div style="width:100%;"><img src="login_pic.png" alt="" style="width: 300px; "></div> <br>
+            2. Click Login Now <br>  <br>
+            3. Logged in to the website. <br>
+           
+        </p>
+
+    </div>
+
+    <div class="description-container">
+        <p class="description-title">  VIEWING PROFILE <img src="change_pic.png" alt=""></p>
+        <p class="description-texts">
+            1. Click "MY PROFILE" on the navigation panel at the top.
+           <div style="width:100%;"><img src="booknow_sc.png" alt="" style="width: 300px; "></div> <br>
+            2. You'll see your information and the tickets you booked. <br>  <br>
+            <div style="width:100%;"><img src="myprofile_sc.png" alt="" style="width: 300px; "></div> <br>
+            <div style="width:100%;"><img src="mytickets_sc.png" alt="" style="width: 300px; "></div> <br>
+
+        </p>
+
+    </div>
+
+    <div class="description-container">
+        <p class="description-title">CHANGING ACCOUNT INFORMATION <img src="change_pic.png" alt=""></p>
+        <p class="description-texts">
+            1. Click "MY PROFILE" on the navigation panel at the top.
+           <div style="width:100%;"><img src="profile_sc.png" alt="" style="width: 300px; "></div> <br>
+            2. Click the "Edit Profile" button on lower right. <br>  <br>
+            <div style="width:100%;"><img src="profile_sc1.png" alt="" style="width: 300px; "></div> <br>
+            3. Enter new information. <br> <br>
+            <div style="width:100%;"><img src="profile_sc2.png" alt="" style="width: 300px; "></div> <br>
+            3. Click Confirm and the information is updated. <br> 
+
+        </p>
+
+    </div>
+
+    <div class="description-container">
+        <p class="description-title"> SIGNING OUT <img src="change_pic.png" alt=""></p>
+        <p class="description-texts">
+            1. Mouse over or click the logout logo on the lower right of the screen.
+           <div style="width:100%;"><img src="logout_sc.png" alt="" style="width: 300px; "></div> <br>
+            2. Click the Log Out button and you'll be logged out and be redirected to login page. <br>  <br>
+        
+        </p>
+
+    </div>
+
+ 
+    <div class="description-container">
+        <p class="description-title"> BOOKING A TICKET <img src="change_pic.png" alt=""></p>
+        <p class="description-texts">
+            1. Click any book now button.
+           <div style="width:100%;"><img src="booknow_sc.png" alt="" style="width: 300px; "></div> <br>
+            2. Choose Movie ticket to reserve. <br>  <br>
+            <div style="width:100%;"><img src="choosemovie_sc.png" alt="" style="width: 300px; "></div> <br>
+            3. Click Next button. <br>
+            4. Review information that was automatically stated. <br><br>
+            <div style="width:100%;"><img src="ticketinfo_sc.png" alt="" style="width: 300px; "></div> <br>
+            5. Choose Schedule (date must be minimum of 3 days after the current date of booking) <br>
+            6. Choose Time. <br>
+            7. Choose Cinema. <br>
+            8. Click Next Button. (Click back to go back to movie selection.) <br><br>
+            <div style="width:100%;"><img src="chooseticketinfo_sc.png" alt="" style="width: 300px; "></div> <br>
+            9. Click Submit Button. (Click back to go back to information review.) <br>
+            10. Booking requested. <br><br>
+         <i> The booking is pending. The staff will review your booking request in minimum of 24 hours. </i>  
+        </p>
+
+    </div>
+    
+    <div class="description-container">
+        <p class="description-title">  CONTACTING US <img src="change_pic.png" alt=""></p>
+        <p class="description-texts">
+            1. Click "ABOUT" on the navigation panel at the top.
+           <div style="width:100%;"><img src="about_sc.png" alt="" style="width: 300px; "></div> <br>
+            2. Click "CONTACT US" button to view different platforms to reach us.
+            <div style="width:100%;"><img src="getintouch_sc.png" alt="" style="width: 300px; "></div> <br>
+            3. Click "ABOUT US" button to go back to "ABOUT" page.
+        </p>
+
+    </div>
+
+    <div class="description-container">
+        <p class="description-title">CINEMAS MOVIE LIST<img src="change_pic.png" alt=""></p>
+        <p class="description-texts">
+            1. Click "CINEMAS" on the navigation panel at the top.
+           <div style="width:100%;"><img src="cinemas_sc.png" alt="" style="width: 300px; "></div> <br>
+            2. Click "View What's Showing" on any cinema to view available movies on that branch.
+            <div style="width:100%;"><img src="branchmovie_sc.png" alt="" style="width: 300px; "></div> <br>
+            
+        </p>
+
+    </div>
+    
+    <div class="description-container">
+        <p class="description-title">  LIGHT/DARK THEME <img src="change_pic.png" alt=""></p>
+        <p class="description-texts">
+            1. Click light/dark button on the lower right of the screen based on your preference.
+           <div style="width:100%;"><img src="lightdark_sc.png" alt="" style="width: 300px; "></div> <br>
+   
+        </p>
+
+    </div>
+
+
+    
+    
+
+
+</div>
+
+<div class="footer-main-container" style="width: 100%; height: 250px; background-color: #970909; margin-top: 0px;">
+    <div class="footer-icons-container" style="width: 100%;background:none;
+    display: flex; align-items: center; justify-content: center; padding-top: 30px; ">
+
+       <a href="https://www.instagram.com/systematix.co/" target="_blank" style="width: 50px; background:none;"> 
+        <img style="width: 100%; background:none;" src="instagram.png"> </a>
+        
+        <a href="https://www.facebook.com/Systematixco-104839155600977" target="_blank" style="width: 50px; background:none;"> 
+        <img style="width: 100%; background:none;" src="facebook.png"> </a>
+
+        <a href="mailto:systematix.co@gmail.com" target="_blank" style="width: 50px; background:none;"> 
+        <img style="width: 100%; background:none;" src="message.png"> </a>
+
+        <a href="tel:+639197750645" target="_blank" style="width: 50px; background:none;"> 
+        <img style="width: 100%; background:none;" src="phone.png"> </a>
+
+    </div>
+
+    <div class="footer-icons-container" style="width: 100%; border-bottom: 1px solid rgb(231, 231, 231);background:none;
+    display: flex; align-items: center; justify-content: center; padding-top: 10px; text-align: center;">
+
+       <a href="index.html" style="background:none;"><p style="width: 100%; background:none; color: white; 
+       padding: 10px;"> MOVIES </p> </a> 
+
+       <a href="cinema.html" style="background:none; "><p style="width:  100%; background:none; color: white; 
+       padding: 10px;"> CINEMAS </p> </a> 
+
+        <a href="about.html" style="background:none;"><p style="width:  100%; background:none; color: white; 
+        padding: 10px;"> ABOUT </p> </a> 
+
+        <a href="guide.html" style="background:none; "><p style="width:  100%; background:none; color: white; 
+        padding: 10px;"> HELP </p> </a> 
+           
+        <a href="profile.php" style="background:none; "><p style="width:  100%; background:none; color: white; 
+        padding: 10px;"> MY PROFILE </p> </a> 
+        
+
+    </div>
+
+    <div class="footer-icons-container" style="width: 100%; background:none;
+    display: flex; align-items: center; justify-content: center; padding-top: 10px; text-align: center;">
+        <p style="width: auto; background:none; color: white; padding: 10px;" > 
+            <a style=" background:none; color: white;" href="terms.html">Terms & Conditions</a> |
+        <a style=" background:none; color: white;" href="privacy.html">Data Privacy Policy</a> </p>
+        <p style="width: auto; background:none; color: white; padding: 10px;"> 
+            &#169; 2022 Systematix.Co | All Rights Reserved. </p>
+
+
+    </div>
+</div>
+
+</body>
+</html>
